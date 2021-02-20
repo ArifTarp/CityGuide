@@ -53,7 +53,7 @@ namespace API
                 });
             });
 
-            services.AddSingleton<IAppRepository, AppRepository>();
+            services.AddScoped<IAppRepository, AppRepository>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
