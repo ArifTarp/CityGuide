@@ -8,9 +8,9 @@ using API.Models;
 
 namespace API.Helpers
 {
-    public class AutoMapperProfiles : Profile
+    public class AutoMapperProfile : Profile
     {
-        public AutoMapperProfiles()
+        public AutoMapperProfile()
         {
             CreateMap<City, CityForListDto>().ForMember(dest=>dest.PhotoUrl,opt=>
             {
