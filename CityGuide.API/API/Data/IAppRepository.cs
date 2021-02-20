@@ -13,7 +13,7 @@ namespace API.Data
         bool SaveAll();
 
         List<City> GetCities();
-        List<Photo> GetPhotosByCity(int cityId);
+        List<Photo> GetPhotosByCityId(int cityId);
         City GetCityById(int cityId);
         Photo GetPhoto(int id);
     }

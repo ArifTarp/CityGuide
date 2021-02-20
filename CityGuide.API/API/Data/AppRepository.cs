@@ -48,7 +48,7 @@ namespace API.Data
             return photo;
         }
 
-        public List<Photo> GetPhotosByCity(int cityId)
+        public List<Photo> GetPhotosByCityId(int cityId)
         {
             var photos = _dataContext.Photos.Where(p => p.CityId == cityId).ToList();
             return photos;
