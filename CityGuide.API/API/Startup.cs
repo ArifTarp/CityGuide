@@ -54,6 +54,8 @@ namespace API
             });
 
             services.AddScoped<IAppRepository, AppRepository>();
+
+            services.AddMvc().AddNewtonsoftJson(opt => opt.SerializerSettings.ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore);
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
