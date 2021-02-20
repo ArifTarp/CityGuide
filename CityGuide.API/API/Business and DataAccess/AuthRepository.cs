@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
 using API.Models;
 
-namespace API.Data
+namespace API.BusinessAndDataAccess
 {
     public class AuthRepository : IAuthRepository
     {

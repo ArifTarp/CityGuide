@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using API.Models;
 
-namespace API.Data
+namespace API.BusinessAndDataAccess
 {
     public interface IAuthRepository
     {
