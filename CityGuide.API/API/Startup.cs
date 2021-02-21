@@ -34,6 +34,8 @@ namespace API
         {
             services.AddDbContext<DataContext>(options => options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
 
+            services.Configure<CloudinarySettings>(Configuration.GetSection("CloudinarySettings"));
+
             services.AddControllers();
 
             var mapperConfig = new MapperConfiguration(mc =>
