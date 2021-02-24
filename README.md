@@ -13,3 +13,5 @@ This project is not a professional project. This project includes my old work.
 - Add city photos
 - Each user can only change their own added city
 - Listing of cities added by everyone
+### Entity Relationship Diagram
+![er diagram](https://github.com/ArifTarp/CityGuide/blob/main/screen%20shots/entity-relationship-diagram.PNG)
