@@ -1,5 +1,5 @@
 # City Guide
-This project is not a professional project. This project includes my old work.  
+This project is not a professional project. This project includes my old works.  
 ### Used Technologies
 - Asp.Net Core Web API
 - Angular
