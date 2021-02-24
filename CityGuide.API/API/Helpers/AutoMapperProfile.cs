@@ -12,9 +12,14 @@ namespace API.Helpers
     {
         public AutoMapperProfile()
         {
-            CreateMap<City, CityForListDto>().ForMember(dest=>dest.PhotoUrl,opt=>
+            CreateMap<City, CityForListDto>()
+            .ForMember(dest=>dest.PhotoUrl,opt=>
             {
                 opt.MapFrom(src => src.Photos.FirstOrDefault(p => p.IsMain).Url);
+            })
+            .ForMember(dest => dest.AddedDateOfPhoto, opt =>
+            {
+                opt.MapFrom(src => src.Photos.FirstOrDefault(p => p.IsMain).DateAdded);
             });
             CreateMap<City, CityForDetailDto>();
             CreateMap<PhotoForCreationDto, Photo>();
