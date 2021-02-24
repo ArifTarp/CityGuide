@@ -8,6 +8,7 @@ using Microsoft.AspNetCore.Mvc;
 using API.BusinessAndDataAccess;
 using API.Dtos;
 using API.Models;
+using Microsoft.AspNetCore.Authorization;
 
 namespace API.Controllers
 {

@@ -79,13 +79,14 @@ namespace API.Controllers
             if (_appRepository.SaveAll())
             {
                 var photoForReturn = _mapper.Map<PhotoForReturnDto>(photo);
-                return CreatedAtRoute("GetPhoto", new {Id= photoForReturn.Id});
+                return Ok(photoForReturn);
             }
 
             return BadRequest("Could not add the photo");
         }
 
-        [HttpGet("{id}", Name = "GetPhoto")]
+        [HttpGet()]
+        [Route("GetPhoto")]
         public ActionResult GetPhoto(int id)
         {
             var photoFromDb = _appRepository.GetPhoto(id);
