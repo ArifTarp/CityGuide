@@ -1,0 +1,32 @@
+<br>
+<div class="row">
+  <div class="col-md-6 offset-md-3">
+    <form [formGroup]="cityAddForm" (ngSubmit)="addCity()" class="form-cityadd">
+      <h3 class="text-center font-weight-bold">Add A City</h3>
+      <div class="form-group">
+        <label>City Name</label>
+        <input type="text" id="name" formControlName="name" class="form-control" placeholder="City Name" autofocus>
+        <span class="help-block font-italic" *ngIf="cityAddForm.get('name').hasError('required') && cityAddForm.get('name').touched">
+          The City Name Required...
+        </span>
+      </div>
+      <div class="form-group">
+        <label>City Description</label>
+        <app-ngx-editor class="form-control" id="description" name="description" [placeholder]="'City Description'" formControlName="description" [spellcheck]="true"></app-ngx-editor>       
+        <span class="help-block font-italic" *ngIf="cityAddForm.get('description').hasError('required') && cityAddForm.get('description').touched">
+          The City Description Required...
+        </span>
+      </div>
+      <hr>
+      <div class="row">
+        <div class="col text-center">
+          <input type="submit" class="btn btn-primary" value="Submit The City" [disabled]="!cityAddForm.valid">
+        </div>
+      </div>
+      <h6>{{cityAddForm.value|json}}</h6>
+      <h6>{{cityAddForm.status|json}}</h6>
+    </form>
+  </div>
+</div>
+
+<app-photo></app-photo>
