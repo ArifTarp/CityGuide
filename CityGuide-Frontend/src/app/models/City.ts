@@ -6,5 +6,6 @@ export class City {
     description:string;
     name:string;
     photoUrl:string;
+    addedDateOfPhoto:Date;
     photos:Photo[];
 }
