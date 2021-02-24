@@ -14,7 +14,6 @@ export class CityComponent implements OnInit {
   constructor(private cityService:CityService) { 
     this.cityService.getCities().subscribe(data=>{
       this.cities=data;
-      console.log(this.cities);
     })
   }
   
