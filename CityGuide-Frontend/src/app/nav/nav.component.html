@@ -12,7 +12,7 @@
         <a class="nav-link" routerLink="city" routerLinkActive="active">Cities</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" routerLink="cityAdd" routerLinkActive="active">Add A City</a>
+        <a class="nav-link" *ngIf="isAuthenticated" routerLink="cityAdd" routerLinkActive="active">Add A City</a>
       </li>
       <li class="nav-item">
         <a class="nav-link" *ngIf="!isAuthenticated" routerLink="register" routerLinkActive="active">Register</a>
