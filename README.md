@@ -8,7 +8,7 @@ This project is not a professional project. This project includes my old works.
 ### Functionalities in project
 - User registration
 - User login
-- Token
+- JWT (Json Web Token)
 - Adding city
 - Add city photos
 - Each user can only change their own added city
